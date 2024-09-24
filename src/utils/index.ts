@@ -32,6 +32,7 @@ const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [ChainId.BNB]: 'https://bscscan.com',
   [ChainId.AVALANCHE]: 'https://snowtrace.io',
   [ChainId.BASE]: 'https://basescan.org',
+  [ChainId.ABSTRACT_TESTNET]: 'https://explorer.testnet.abs.xyz',
 }
 
 export enum ExplorerDataType {
@@ -56,7 +57,7 @@ export function getExplorerLink(chainId: number, data: string, type: ExplorerDat
       return `${prefix}/tx/${data}`
 
     case ExplorerDataType.TOKEN:
-      return `${prefix}/token/${data}`
+      return `${prefix}/${chainId === ChainId.ABSTRACT_TESTNET ? 'token' : 'address'}/${data}`
 
     case ExplorerDataType.BLOCK:
       return `${prefix}/block/${data}`

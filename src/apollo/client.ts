@@ -6,7 +6,7 @@ export const healthClient = new ApolloClient({
 })
 
 export const blockClient = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/absctract-testnet/blocks-subgraph',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -21,7 +21,7 @@ export const blockClient = new ApolloClient({
 })
 
 export const client = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3?source=uniswap',
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/absctract-testnet/v3-subgraph',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -336,6 +336,49 @@ export const celoClient = new ApolloClient({
 
 export const celoBlockClient = new ApolloClient({
   uri: 'https://api.thegraph.com/subgraphs/name/jesse-sawa/celo-blocks',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const abstractTestnetClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/absctract-testnet/v3-subgraph',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const abstractTestnetBlockClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/absctract-testnet/blocks-subgraph',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {

@@ -96,6 +96,7 @@ export const L2_CHAIN_IDS = [
   ChainId.OPTIMISM,
   ChainId.OPTIMISM_GOERLI,
   ChainId.BASE,
+  ChainId.ABSTRACT_TESTNET,
 ] as const
 
 export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number]

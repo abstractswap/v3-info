@@ -11,7 +11,7 @@ import { useTVLOffset } from './derived'
 export const GLOBAL_DATA = (block?: string) => {
   const queryString = ` query uniswapFactories {
       factories(
-       ${block !== undefined ? `block: { number: ${block}}` : ``} 
+       ${block !== undefined && block > '0' ? `block: { number: ${block}}` : ``} 
        first: 1, subgraphError: allow) {
         txCount
         totalVolumeUSD

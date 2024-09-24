@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { BookOpen, Code, Info, MessageCircle } from 'react-feather'
+import { Code /*, BookOpen, Info, MessageCircle */ } from 'react-feather'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -81,7 +81,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/Uniswap/uniswap-v3-info'
+const CODE_LINK = 'https://github.com/abstractswap'
 
 export default function Menu() {
   const node = useRef<HTMLDivElement>(null)
@@ -97,22 +97,22 @@ export default function Menu() {
 
       {isOpen && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://uniswap.org/">
+          {/* <MenuItem id="link" href="https://uniswap.org/">
             <Info size={14} />
             About
           </MenuItem>
           <MenuItem id="link" href="https://docs.uniswap.org/">
             <BookOpen size={14} />
             Docs
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem id="link" href={CODE_LINK}>
             <Code size={14} />
             Github
           </MenuItem>
-          <MenuItem id="link" href="https://discord.gg/FCfyBSbCU5">
+          {/* <MenuItem id="link" href="https://discord.gg/FCfyBSbCU5">
             <MessageCircle size={14} />
             Discord
-          </MenuItem>
+          </MenuItem> */}
         </MenuFlyout>
       )}
     </StyledMenu>

@@ -15,8 +15,9 @@ import PoolPage from './Pool/PoolPage'
 import { ExternalLink, TYPE } from 'theme'
 import { useActiveNetworkVersion, useSubgraphStatus } from 'state/application/hooks'
 import { DarkGreyCard } from 'components/Card'
-import { SUPPORTED_NETWORK_VERSIONS, EthereumNetworkInfo, OptimismNetworkInfo } from 'constants/networks'
+import { SUPPORTED_NETWORK_VERSIONS, OptimismNetworkInfo, AbstractTestnetNetworkInfo } from 'constants/networks'
 import { Link } from 'rebass'
+import { forkConfig } from 'forkConfig'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -112,7 +113,7 @@ export default function App() {
   const [activeNetwork, setActiveNetwork] = useActiveNetworkVersion()
   useEffect(() => {
     if (location.pathname === '/') {
-      setActiveNetwork(EthereumNetworkInfo)
+      setActiveNetwork(AbstractTestnetNetworkInfo)
     } else {
       SUPPORTED_NETWORK_VERSIONS.map((n) => {
         if (location.pathname.includes(n.route.toLocaleLowerCase())) {
@@ -147,14 +148,16 @@ export default function App() {
                 </WarningBanner>
               </BannerWrapper>
             )}
-            <BannerWrapper>
-              <UrlBanner>
-                {`info.uniswap.org is being deprecated on June 11th. Explore the new combined V2 and V3 analytics at `}
-                <Link href={'https://app.uniswap.org/explore'}>
-                  <Decorator>app.uniswap.org</Decorator>
-                </Link>
-              </UrlBanner>
-            </BannerWrapper>
+            {forkConfig.showBanner && (
+              <BannerWrapper>
+                <UrlBanner>
+                  {`info.uniswap.org is being deprecated on June 11th. Explore the new combined V2 and V3 analytics at `}
+                  <Link href={'https://staging.abstract.w3us.site/explore'}>
+                    <Decorator>app.uniswap.org</Decorator>
+                  </Link>
+                </UrlBanner>
+              </BannerWrapper>
+            )}
             <Hide1080>
               <TopBar />
             </Hide1080>

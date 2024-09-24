@@ -35,7 +35,7 @@ export type NetworkInfo = {
 export const EthereumNetworkInfo: NetworkInfo = {
   chainId: ChainId.MAINNET,
   id: SupportedNetwork.ETHEREUM,
-  route: '',
+  route: 'ethereum',
   name: 'Ethereum',
   bgColor: '#fc077d',
   primaryColor: '#fc077d',
@@ -122,7 +122,7 @@ export const AvalancheNetworkInfo: NetworkInfo = {
 export const AbstractTestnetNetworkInfo: NetworkInfo = {
   chainId: 11124,
   id: SupportedNetwork.ABSTRACT_TESTNET,
-  route: 'abstract-testnet',
+  route: '',
   name: 'Abstract Testnet',
   bgColor: '#00DE73',
   primaryColor: '#07C983',

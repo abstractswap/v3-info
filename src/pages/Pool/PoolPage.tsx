@@ -26,7 +26,7 @@ import DensityChart from 'components/DensityChart'
 import { MonoSpace } from 'components/shared'
 import { useActiveNetworkVersion } from 'state/application/hooks'
 import { networkPrefix } from 'utils/networkPrefix'
-import { EthereumNetworkInfo } from 'constants/networks'
+import { AbstractTestnetNetworkInfo, EthereumNetworkInfo } from 'constants/networks'
 import { GenericImageWrapper } from 'components/Logo'
 import { Navigate, useParams } from 'react-router-dom'
 // import { Trace } from '@uniswap/analytics'
@@ -212,7 +212,7 @@ function PoolPage({ address }: { address: string }) {
                 </StyledInternalLink>
               </ResponsiveRow>
             </AutoColumn>
-            {activeNetwork !== EthereumNetworkInfo ? null : (
+            {activeNetwork !== AbstractTestnetNetworkInfo ? null : (
               <RowFixed>
                 <StyledExternalLink
                   href={`https://staging.abstract.w3us.site/#/add/${poolData.token0.address}/${poolData.token1.address}/${poolData.feeTier}`}

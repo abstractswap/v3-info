@@ -8,6 +8,7 @@ import BASE_LOGO_URL from '../assets/images/base-logo.svg'
 import { ChainId } from '@uniswap/sdk-core'
 import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 import ABSTRACT_LOGO_URL from '../assets/images/abstract-logo.png'
+import ZERO_LOGO_URL from '../assets/images/zero-logo.png'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -19,6 +20,7 @@ export enum SupportedNetwork {
   BASE,
   AVALANCHE,
   ABSTRACT_TESTNET,
+  ZERO,
 }
 
 export type NetworkInfo = {
@@ -130,6 +132,17 @@ export const AbstractTestnetNetworkInfo: NetworkInfo = {
   imageURL: ABSTRACT_LOGO_URL,
 }
 
+export const ZeroNetworkNetworkInfo: NetworkInfo = {
+  chainId: 543210,
+  id: SupportedNetwork.ZERO,
+  route: 'zero',
+  name: 'Zero Mainnet',
+  bgColor: '#0052ff',
+  primaryColor: '#0052ff',
+  secondaryColor: '#0052ff',
+  imageURL: ZERO_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -140,4 +153,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // BaseNetworkInfo,
   // AvalancheNetworkInfo,
   AbstractTestnetNetworkInfo,
+  ZeroNetworkNetworkInfo,
 ]

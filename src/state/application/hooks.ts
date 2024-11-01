@@ -18,6 +18,8 @@ import {
   baseClient,
   abstractTestnetClient,
   abstractTestnetBlockClient,
+  zeroBlockClient,
+  zeroClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -154,6 +156,8 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
       return baseClient
     case SupportedNetwork.ABSTRACT_TESTNET:
       return abstractTestnetClient
+    case SupportedNetwork.ZERO:
+      return zeroClient
     default:
       return client
   }
@@ -181,6 +185,8 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
       return baseBlockClient
     case SupportedNetwork.ABSTRACT_TESTNET:
       return abstractTestnetBlockClient
+    case SupportedNetwork.ZERO:
+      return zeroBlockClient
     default:
       return blockClient
   }

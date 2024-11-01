@@ -75,6 +75,7 @@ export const initialState: TokensState = {
     [SupportedNetwork.AVALANCHE]: {},
     [SupportedNetwork.BASE]: {},
     [SupportedNetwork.ABSTRACT_TESTNET]: {},
+    [SupportedNetwork.ZERO]: {},
   },
 }
 

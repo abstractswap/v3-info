@@ -81,7 +81,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/abstractswap'
+const CODE_LINK = 'https://github.com'
 
 export default function Menu() {
   const node = useRef<HTMLDivElement>(null)

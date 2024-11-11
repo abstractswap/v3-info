@@ -24,9 +24,11 @@ export function chainIdToNetworkName(networkId: ChainId) {
       return 'smartchain'
     case ChainId.BASE:
       return 'base'
-    case ChainId.ABSTRACT_TESTNET:
+    // case ChainId.ABSTRACT_TESTNET:
+    case 11124 as ChainId:
       return 'abstract-testnet'
-    case ChainId.ZERO:
+    // case ChainId.ZERO:
+    case 543210 as ChainId:
       return 'zero'
     default:
       return 'ethereum'

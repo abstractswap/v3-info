@@ -1,22 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AutoRow, RowBetween, RowFixed } from 'components/Row'
-import { ExternalLink, TYPE } from 'theme'
-import { useEthPrices } from 'hooks/useEthPrices'
-import { formatDollarAmount } from 'utils/numbers'
+import { AutoRow, RowBetween } from 'components/Row'
+import { ExternalLink } from 'theme'
+
 import Polling from './Polling'
-import { useActiveNetworkVersion } from '../../state/application/hooks'
-import { SupportedNetwork } from '../../constants/networks'
+
 import { forkConfig } from 'forkConfig'
+import { ChevronLeft } from 'react-feather'
+import { Flex } from 'rebass'
 
 const Wrapper = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.black};
   padding: 10px 20px;
-`
-
-const Item = styled(TYPE.main)`
-  font-size: 12px;
 `
 
 const StyledLink = styled(ExternalLink)`
@@ -25,32 +21,19 @@ const StyledLink = styled(ExternalLink)`
 `
 
 const TopBar = () => {
-  const ethPrices = useEthPrices()
-  const [activeNetwork] = useActiveNetworkVersion()
+  const interfaceUrl = process.env.REACT_APP_INTERFACE_URL ?? 'https://reservoir.app'
+
   return (
     <Wrapper>
       <RowBetween>
         {forkConfig.latestSyncedBlockSupported && <Polling />}
-        <AutoRow $gap="6px">
-          <RowFixed>
-            {activeNetwork.id === SupportedNetwork.CELO ? (
-              <Item>Celo Price:</Item>
-            ) : activeNetwork.id === SupportedNetwork.BNB ? (
-              <Item>BNB Price:</Item>
-            ) : activeNetwork.id === SupportedNetwork.AVALANCHE ? (
-              <Item>AVAX Price:</Item>
-            ) : (
-              <Item>Eth Price:</Item>
-            )}
-            <Item fontWeight="700" ml="4px">
-              {formatDollarAmount(ethPrices?.current)}
-            </Item>
-          </RowFixed>
-        </AutoRow>
-        <AutoRow $gap="6px" style={{ justifyContent: 'flex-end' }}>
-          {/* <StyledLink href="https://v2.info.uniswap.org/#/">V2 Analytics</StyledLink>
-          <StyledLink href="https://docs.uniswap.org/">Docs</StyledLink> */}
-          <StyledLink href="https://staging.reservoir.w3us.site/#/swap">App</StyledLink>
+        <AutoRow $gap="6px" style={{ justifyContent: 'flex-start' }}>
+          <StyledLink href={`${interfaceUrl}/#/swap`}>
+            <Flex alignItems={'center'}>
+              <ChevronLeft width={16} height={16} />
+              Back to swap page
+            </Flex>
+          </StyledLink>
         </AutoRow>
       </RowBetween>
     </Wrapper>

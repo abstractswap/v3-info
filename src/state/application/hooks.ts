@@ -124,7 +124,11 @@ export function useSubgraphStatus(): [
 // returns a function that allows adding a popup
 export function useActiveNetworkVersion(): [NetworkInfo, (activeNetworkVersion: NetworkInfo) => void] {
   const dispatch = useDispatch()
-  const activeNetwork = useSelector((state: AppState) => state.application.activeNetworkVersion)
+  const activeNetwork = useSelector((state: AppState) => {
+    console.log('state: ', state)
+    return state.application.activeNetworkVersion
+  })
+
   const update = useCallback(
     (activeNetworkVersion: NetworkInfo) => {
       dispatch(updateActiveNetworkVersion({ activeNetworkVersion }))

@@ -8,7 +8,7 @@ export const UNSUPPORTED_LIST_URLS: string[] = []
 // export const CELO_LIST = 'https://celo-org.github.io/celo-token-list/celo.tokenlist.json'
 // export const BNB_LIST = 'https://raw.githubusercontent.com/plasmadlt/plasma-finance-token-list/master/bnb.json'
 export const ABSTRACT_TESTNET_LIST = 'https://api.testnets.relay.link/tokenlist?chainId=11124'
-export const ZERO_LIST = 'https://api.testnets.relay.link/tokenlist?chainId=543210'
+export const ZERO_LIST = 'https://api.relay.link/tokenlist?chainId=543210'
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [
@@ -18,6 +18,7 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   // CELO_LIST,
   // BNB_LIST,
   ABSTRACT_TESTNET_LIST,
+  ZERO_LIST,
   ...UNSUPPORTED_LIST_URLS, // need to load unsupported tokens as well
 ]
 

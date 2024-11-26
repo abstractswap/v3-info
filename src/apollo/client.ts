@@ -433,3 +433,46 @@ export const zeroBlockClient = new ApolloClient({
     },
   },
 })
+
+export const bobClient = new ApolloClient({
+  uri: 'https://api.goldsky.com/api/public/project_cm3xeo5ld5gy101zw2y66hux8/subgraphs/bob-uniswap-v3/1.0.0/gn',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const bobBlockClient = new ApolloClient({
+  uri: 'https://api.goldsky.com/api/public/project_cm3xeo5ld5gy101zw2y66hux8/subgraphs/bob-blocks/1.0.0/gn',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})

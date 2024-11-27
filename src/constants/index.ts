@@ -31,6 +31,7 @@ export const TOKEN_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.BASE]: [],
   [SupportedNetwork.ABSTRACT_TESTNET]: [],
   [SupportedNetwork.ZERO]: [],
+  [SupportedNetwork.BOB]: [],
 }
 
 export const POOL_HIDE: { [key: string]: string[] } = {
@@ -52,6 +53,7 @@ export const POOL_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.BASE]: [],
   [SupportedNetwork.ABSTRACT_TESTNET]: [],
   [SupportedNetwork.ZERO]: [],
+  [SupportedNetwork.BOB]: [],
 }
 
 export const START_BLOCKS: { [key: string]: number } = {
@@ -65,6 +67,7 @@ export const START_BLOCKS: { [key: string]: number } = {
   [SupportedNetwork.BASE]: 1371680,
   [SupportedNetwork.ABSTRACT_TESTNET]: 356725,
   [SupportedNetwork.ZERO]: 727,
+  [SupportedNetwork.BOB]: 5188280,
 }
 
 export interface WalletInfo {

@@ -28,6 +28,8 @@ export function chainIdToNetworkName(networkId: ChainId) {
       return 'abstract-testnet'
     case ChainId.ZERO:
       return 'zero'
+    case ChainId.BOB:
+      return 'bob'
     default:
       return 'ethereum'
   }

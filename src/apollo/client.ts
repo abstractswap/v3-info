@@ -435,7 +435,7 @@ export const zeroBlockClient = new ApolloClient({
 })
 
 export const bobClient = new ApolloClient({
-  uri: 'https://api.goldsky.com/api/public/project_cm3xeo5ld5gy101zw2y66hux8/subgraphs/bob-uniswap-v3/1.0.0/gn',
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/bob/blocks-subgraph/graphql',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -463,7 +463,7 @@ export const bobClient = new ApolloClient({
 })
 
 export const bobBlockClient = new ApolloClient({
-  uri: 'https://api.goldsky.com/api/public/project_cm3xeo5ld5gy101zw2y66hux8/subgraphs/bob-blocks/1.0.0/gn',
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/bob/v3-subgraph/graphql',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {

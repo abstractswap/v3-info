@@ -181,4 +181,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   AbstractTestnetNetworkInfo,
   ZeroNetworkNetworkInfo,
   BobNetworkNetworkInfo,
+  CyberNetworkNetworkInfo,
 ]

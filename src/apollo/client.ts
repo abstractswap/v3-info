@@ -435,7 +435,7 @@ export const zeroBlockClient = new ApolloClient({
 })
 
 export const bobClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/bob/v3-subgraph/graphql',
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/bob/v3-subgraph',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -463,7 +463,7 @@ export const bobClient = new ApolloClient({
 })
 
 export const bobBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/bob/blocks-subgraph/graphql',
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/bob/blocks-subgraph',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -478,7 +478,7 @@ export const bobBlockClient = new ApolloClient({
 })
 
 export const cyberClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/cyber/v3-subgraph/graphql',
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/cyber/v3-subgraph',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -506,7 +506,7 @@ export const cyberClient = new ApolloClient({
 })
 
 export const cyberBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/cyber/blocks-subgraph/graphql',
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/cyber/blocks-subgraph',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {

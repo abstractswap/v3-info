@@ -99,6 +99,7 @@ export const L2_CHAIN_IDS = [
   ChainId.ABSTRACT_TESTNET,
   ChainId.ZERO,
   ChainId.BOB,
+  ChainId.CYBER,
 ] as const
 
 export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number]
@@ -113,6 +114,7 @@ export function getChainPriority(chainId: ChainId): number {
     case ChainId.ABSTRACT_TESTNET:
     case ChainId.ZERO:
     case ChainId.BOB:
+    case ChainId.CYBER:
       return 0
     case ChainId.MAINNET:
     case ChainId.GOERLI:

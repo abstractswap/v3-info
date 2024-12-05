@@ -10,6 +10,7 @@ import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 import ABSTRACT_LOGO_URL from '../assets/images/abstract-logo.png'
 import ZERO_LOGO_URL from '../assets/images/zero-logo.png'
 import BOB_LOGO_URL from '../assets/images/bob-logo.png'
+import CYBER_LOGO_URL from '../assets/images/cyber-logo.png'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -23,6 +24,7 @@ export enum SupportedNetwork {
   ABSTRACT_TESTNET,
   ZERO,
   BOB,
+  CYBER,
 }
 
 export type NetworkInfo = {
@@ -146,7 +148,7 @@ export const ZeroNetworkNetworkInfo: NetworkInfo = {
 }
 
 export const BobNetworkNetworkInfo: NetworkInfo = {
-  chainId: 543210,
+  chainId: 60808,
   id: SupportedNetwork.BOB,
   route: 'bob',
   name: 'Bob',
@@ -154,6 +156,17 @@ export const BobNetworkNetworkInfo: NetworkInfo = {
   primaryColor: '#f45d00',
   secondaryColor: '#fff',
   imageURL: BOB_LOGO_URL,
+}
+
+export const CyberNetworkNetworkInfo: NetworkInfo = {
+  chainId: 7560,
+  id: SupportedNetwork.CYBER,
+  route: 'cyber',
+  name: 'Cyber',
+  bgColor: '#fff',
+  primaryColor: '#08dc10',
+  secondaryColor: '#fff',
+  imageURL: CYBER_LOGO_URL,
 }
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [

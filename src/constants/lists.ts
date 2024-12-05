@@ -10,6 +10,7 @@ export const UNSUPPORTED_LIST_URLS: string[] = []
 export const ABSTRACT_TESTNET_LIST = 'https://api.testnets.relay.link/tokenlist?chainId=11124'
 export const ZERO_LIST = 'https://api.relay.link/tokenlist?chainId=543210'
 export const BOB_LIST = 'https://api.relay.link/tokenlist?chainId=60808'
+export const CYBER_LIST = 'https://api.relay.link/tokenlist?chainId=7560'
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [
@@ -21,6 +22,7 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   ABSTRACT_TESTNET_LIST,
   ZERO_LIST,
   BOB_LIST,
+  CYBER_LIST,
   ...UNSUPPORTED_LIST_URLS, // need to load unsupported tokens as well
 ]
 

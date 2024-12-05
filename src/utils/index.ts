@@ -34,6 +34,8 @@ const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [ChainId.BASE]: 'https://basescan.org',
   [ChainId.ABSTRACT_TESTNET]: 'https://explorer.testnet.abs.xyz',
   [ChainId.ZERO]: 'https://explorer.zero.network',
+  [ChainId.BOB]: 'https://explorer.gobob.xyz',
+  [ChainId.CYBER]: 'https://cyberscan.co',
 }
 
 export enum ExplorerDataType {

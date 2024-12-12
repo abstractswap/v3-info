@@ -11,6 +11,7 @@ import ABSTRACT_LOGO_URL from '../assets/images/abstract-logo.png'
 import ZERO_LOGO_URL from '../assets/images/zero-logo.png'
 import BOB_LOGO_URL from '../assets/images/bob-logo.png'
 import CYBER_LOGO_URL from '../assets/images/cyber-logo.png'
+import SHAPE_LOGO_URL from '../assets/images/shape-logo.png'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -25,6 +26,7 @@ export enum SupportedNetwork {
   ZERO,
   BOB,
   CYBER,
+  SHAPE,
 }
 
 export type NetworkInfo = {
@@ -169,6 +171,17 @@ export const CyberNetworkNetworkInfo: NetworkInfo = {
   imageURL: CYBER_LOGO_URL,
 }
 
+export const ShapeNetworkNetworkInfo: NetworkInfo = {
+  chainId: 360,
+  id: SupportedNetwork.SHAPE,
+  route: 'shape',
+  name: 'Shape',
+  bgColor: '#222',
+  primaryColor: '#222',
+  secondaryColor: '#fff',
+  imageURL: SHAPE_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -182,4 +195,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   ZeroNetworkNetworkInfo,
   BobNetworkNetworkInfo,
   CyberNetworkNetworkInfo,
+  ShapeNetworkNetworkInfo,
 ]

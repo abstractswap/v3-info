@@ -24,6 +24,8 @@ import {
   bobClient,
   cyberClient,
   cyberBlockClient,
+  shapeClient,
+  shapeBlockClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -166,6 +168,8 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
       return bobClient
     case SupportedNetwork.CYBER:
       return cyberClient
+    case SupportedNetwork.SHAPE:
+      return shapeClient
     default:
       return client
   }
@@ -199,6 +203,8 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
       return bobBlockClient
     case SupportedNetwork.CYBER:
       return cyberBlockClient
+    case SupportedNetwork.SHAPE:
+      return shapeBlockClient
     default:
       return blockClient
   }

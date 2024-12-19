@@ -562,3 +562,63 @@ export const shapeBlockClient = new ApolloClient({
     },
   },
 })
+
+export const redstoneClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone/v3-subgraph',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const redstoneBlockClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone/blocks-subgraph',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const redstoneGarnetClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone-garnet/v3-subgraph',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const redstoneGarnetBlockClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone-garnet/blocks-subgraph',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})

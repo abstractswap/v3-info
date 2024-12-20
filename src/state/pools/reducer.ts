@@ -93,6 +93,8 @@ export const initialState: PoolsState = {
     [SupportedNetwork.BOB]: {},
     [SupportedNetwork.CYBER]: {},
     [SupportedNetwork.SHAPE]: {},
+    [SupportedNetwork.REDSTONE]: {},
+    [SupportedNetwork.REDSTONE_GARNET]: {},
   },
 }
 

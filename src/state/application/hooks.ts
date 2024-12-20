@@ -26,6 +26,10 @@ import {
   cyberBlockClient,
   shapeClient,
   shapeBlockClient,
+  redstoneGarnetClient,
+  redstoneClient,
+  redstoneBlockClient,
+  redstoneGarnetBlockClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -174,6 +178,10 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
       return cyberClient
     case SupportedNetwork.SHAPE:
       return shapeClient
+    case SupportedNetwork.REDSTONE:
+      return redstoneClient
+    case SupportedNetwork.REDSTONE_GARNET:
+      return redstoneGarnetClient
     default:
       return client
   }
@@ -209,6 +217,10 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
       return cyberBlockClient
     case SupportedNetwork.SHAPE:
       return shapeBlockClient
+    case SupportedNetwork.REDSTONE:
+      return redstoneBlockClient
+    case SupportedNetwork.REDSTONE_GARNET:
+      return redstoneGarnetBlockClient
     default:
       return blockClient
   }

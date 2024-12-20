@@ -12,6 +12,8 @@ import ZERO_LOGO_URL from '../assets/images/zero-logo.png'
 import BOB_LOGO_URL from '../assets/images/bob-logo.png'
 import CYBER_LOGO_URL from '../assets/images/cyber-logo.png'
 import SHAPE_LOGO_URL from '../assets/images/shape-logo.png'
+import REDSTONE_LOGO_URL from '../assets/images/redstone-logo.svg'
+import REDSTONE_GARNET_LOGO_URL from '../assets/images/redstone-garnet-logo.png'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -27,6 +29,8 @@ export enum SupportedNetwork {
   BOB,
   CYBER,
   SHAPE,
+  REDSTONE,
+  REDSTONE_GARNET,
 }
 
 export type NetworkInfo = {
@@ -182,6 +186,28 @@ export const ShapeNetworkNetworkInfo: NetworkInfo = {
   imageURL: SHAPE_LOGO_URL,
 }
 
+export const RedstoneNetworkInfo: NetworkInfo = {
+  chainId: 690,
+  id: SupportedNetwork.REDSTONE,
+  route: 'redstone',
+  name: 'Redstone',
+  bgColor: '#F01B36',
+  primaryColor: '#F01B36',
+  secondaryColor: '#FB7876',
+  imageURL: REDSTONE_LOGO_URL,
+}
+
+export const RedstoneGarnetNetworkInfo: NetworkInfo = {
+  chainId: 17069,
+  id: SupportedNetwork.REDSTONE_GARNET,
+  route: 'garnet-holesky',
+  name: 'Garnet Holesky',
+  bgColor: '#F01B36',
+  primaryColor: '#F01B36',
+  secondaryColor: '#FB7876',
+  imageURL: REDSTONE_GARNET_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -196,4 +222,6 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   CyberNetworkNetworkInfo,
   BobNetworkNetworkInfo,
   ShapeNetworkNetworkInfo,
+  RedstoneNetworkInfo,
+  RedstoneGarnetNetworkInfo,
 ]

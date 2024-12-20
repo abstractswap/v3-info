@@ -31,6 +31,11 @@ export const TOKEN_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.BASE]: [],
   [SupportedNetwork.ABSTRACT_TESTNET]: [],
   [SupportedNetwork.ZERO]: [],
+  [SupportedNetwork.BOB]: [],
+  [SupportedNetwork.CYBER]: [],
+  [SupportedNetwork.SHAPE]: [],
+  [SupportedNetwork.REDSTONE]: [],
+  [SupportedNetwork.REDSTONE_GARNET]: [],
 }
 
 export const POOL_HIDE: { [key: string]: string[] } = {
@@ -52,6 +57,11 @@ export const POOL_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.BASE]: [],
   [SupportedNetwork.ABSTRACT_TESTNET]: [],
   [SupportedNetwork.ZERO]: [],
+  [SupportedNetwork.BOB]: [],
+  [SupportedNetwork.CYBER]: [],
+  [SupportedNetwork.SHAPE]: [],
+  [SupportedNetwork.REDSTONE]: [],
+  [SupportedNetwork.REDSTONE_GARNET]: [],
 }
 
 export const START_BLOCKS: { [key: string]: number } = {
@@ -65,6 +75,11 @@ export const START_BLOCKS: { [key: string]: number } = {
   [SupportedNetwork.BASE]: 1371680,
   [SupportedNetwork.ABSTRACT_TESTNET]: 356725,
   [SupportedNetwork.ZERO]: 727,
+  [SupportedNetwork.BOB]: 5188280,
+  [SupportedNetwork.CYBER]: 9567951,
+  [SupportedNetwork.SHAPE]: 6022152,
+  [SupportedNetwork.REDSTONE]: 924516,
+  [SupportedNetwork.REDSTONE_GARNET]: 586081,
 }
 
 export interface WalletInfo {

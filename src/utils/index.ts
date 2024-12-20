@@ -34,6 +34,11 @@ const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [ChainId.BASE]: 'https://basescan.org',
   [ChainId.ABSTRACT_TESTNET]: 'https://explorer.testnet.abs.xyz',
   [ChainId.ZERO]: 'https://zero-network.calderaexplorer.xyz',
+  [ChainId.BOB]: 'https://explorer.gobob.xyz',
+  [ChainId.CYBER]: 'https://cyberscan.co',
+  [ChainId.SHAPE]: 'https://shapescan.xyz',
+  [ChainId.REDSTONE]: 'https://explorer.redstone.xyz',
+  [ChainId.REDSTONE_GARNET]: 'https://explorer.garnetchain.com',
 }
 
 export enum ExplorerDataType {

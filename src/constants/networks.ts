@@ -9,6 +9,11 @@ import { ChainId } from '@uniswap/sdk-core'
 import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 import ABSTRACT_LOGO_URL from '../assets/images/abstract-logo.png'
 import ZERO_LOGO_URL from '../assets/images/zero-logo.png'
+import BOB_LOGO_URL from '../assets/images/bob-logo.png'
+import CYBER_LOGO_URL from '../assets/images/cyber-logo.png'
+import SHAPE_LOGO_URL from '../assets/images/shape-logo.png'
+import REDSTONE_LOGO_URL from '../assets/images/redstone-logo.svg'
+import REDSTONE_GARNET_LOGO_URL from '../assets/images/redstone-garnet-logo.png'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -21,6 +26,11 @@ export enum SupportedNetwork {
   AVALANCHE,
   ABSTRACT_TESTNET,
   ZERO,
+  BOB,
+  CYBER,
+  SHAPE,
+  REDSTONE,
+  REDSTONE_GARNET,
 }
 
 export type NetworkInfo = {
@@ -143,6 +153,61 @@ export const ZeroNetworkNetworkInfo: NetworkInfo = {
   imageURL: ZERO_LOGO_URL,
 }
 
+export const BobNetworkNetworkInfo: NetworkInfo = {
+  chainId: 60808,
+  id: SupportedNetwork.BOB,
+  route: 'bob',
+  name: 'Bob',
+  bgColor: '#fff',
+  primaryColor: '#f45d00',
+  secondaryColor: '#fff',
+  imageURL: BOB_LOGO_URL,
+}
+
+export const CyberNetworkNetworkInfo: NetworkInfo = {
+  chainId: 7560,
+  id: SupportedNetwork.CYBER,
+  route: 'cyber',
+  name: 'Cyber',
+  bgColor: '#fff',
+  primaryColor: '#08dc10',
+  secondaryColor: '#fff',
+  imageURL: CYBER_LOGO_URL,
+}
+
+export const ShapeNetworkNetworkInfo: NetworkInfo = {
+  chainId: 360,
+  id: SupportedNetwork.SHAPE,
+  route: 'shape',
+  name: 'Shape',
+  bgColor: '#222',
+  primaryColor: '#222',
+  secondaryColor: '#fff',
+  imageURL: SHAPE_LOGO_URL,
+}
+
+export const RedstoneNetworkInfo: NetworkInfo = {
+  chainId: 690,
+  id: SupportedNetwork.REDSTONE,
+  route: 'redstone',
+  name: 'Redstone',
+  bgColor: '#F01B36',
+  primaryColor: '#F01B36',
+  secondaryColor: '#FB7876',
+  imageURL: REDSTONE_LOGO_URL,
+}
+
+export const RedstoneGarnetNetworkInfo: NetworkInfo = {
+  chainId: 17069,
+  id: SupportedNetwork.REDSTONE_GARNET,
+  route: 'garnet-holesky',
+  name: 'Garnet Holesky',
+  bgColor: '#F01B36',
+  primaryColor: '#F01B36',
+  secondaryColor: '#FB7876',
+  imageURL: REDSTONE_GARNET_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -152,6 +217,11 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // BNBNetworkInfo,
   // BaseNetworkInfo,
   // AvalancheNetworkInfo,
-  AbstractTestnetNetworkInfo,
   // ZeroNetworkNetworkInfo,
+  // BobNetworkNetworkInfo,
+  // CyberNetworkNetworkInfo,
+  // ShapeNetworkNetworkInfo,
+  // RedstoneNetworkInfo,
+  AbstractTestnetNetworkInfo,
+  RedstoneGarnetNetworkInfo,
 ]

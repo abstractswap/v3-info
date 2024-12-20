@@ -14,6 +14,7 @@ import CYBER_LOGO_URL from '../assets/images/cyber-logo.png'
 import SHAPE_LOGO_URL from '../assets/images/shape-logo.png'
 import REDSTONE_LOGO_URL from '../assets/images/redstone-logo.svg'
 import REDSTONE_GARNET_LOGO_URL from '../assets/images/redstone-garnet-logo.png'
+import INK_LOGO_URL from '../assets/images/ink-logo.png'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -31,6 +32,7 @@ export enum SupportedNetwork {
   SHAPE,
   REDSTONE,
   REDSTONE_GARNET,
+  INK,
 }
 
 export type NetworkInfo = {
@@ -208,6 +210,17 @@ export const RedstoneGarnetNetworkInfo: NetworkInfo = {
   imageURL: REDSTONE_GARNET_LOGO_URL,
 }
 
+export const InkNetworkInfo: NetworkInfo = {
+  chainId: ChainId.INK,
+  id: SupportedNetwork.INK,
+  route: 'ink',
+  name: 'Ink',
+  bgColor: '#0052ff',
+  primaryColor: '#0052ff',
+  secondaryColor: '#0052ff',
+  imageURL: INK_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -224,4 +237,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   ShapeNetworkNetworkInfo,
   RedstoneNetworkInfo,
   // RedstoneGarnetNetworkInfo,
+  InkNetworkInfo,
 ]

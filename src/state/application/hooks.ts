@@ -30,6 +30,8 @@ import {
   redstoneClient,
   redstoneBlockClient,
   redstoneGarnetBlockClient,
+  inkBlockClient,
+  inkClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -182,6 +184,8 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
       return redstoneClient
     case SupportedNetwork.REDSTONE_GARNET:
       return redstoneGarnetClient
+    case SupportedNetwork.INK:
+      return inkClient
     default:
       return client
   }
@@ -221,6 +225,8 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
       return redstoneBlockClient
     case SupportedNetwork.REDSTONE_GARNET:
       return redstoneGarnetBlockClient
+    case SupportedNetwork.INK:
+      return inkBlockClient
     default:
       return blockClient
   }

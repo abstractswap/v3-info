@@ -81,6 +81,7 @@ export const initialState: TokensState = {
     [SupportedNetwork.SHAPE]: {},
     [SupportedNetwork.REDSTONE]: {},
     [SupportedNetwork.REDSTONE_GARNET]: {},
+    [SupportedNetwork.INK]: {},
   },
 }
 

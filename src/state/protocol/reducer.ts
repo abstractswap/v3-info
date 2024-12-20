@@ -56,6 +56,7 @@ export const initialState: ProtocolState = {
   [SupportedNetwork.SHAPE]: DEFAULT_INITIAL_STATE,
   [SupportedNetwork.REDSTONE]: DEFAULT_INITIAL_STATE,
   [SupportedNetwork.REDSTONE_GARNET]: DEFAULT_INITIAL_STATE,
+  [SupportedNetwork.INK]: DEFAULT_INITIAL_STATE,
 }
 
 export default createReducer(initialState, (builder) =>

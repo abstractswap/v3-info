@@ -223,5 +223,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   BobNetworkNetworkInfo,
   ShapeNetworkNetworkInfo,
   RedstoneNetworkInfo,
-  RedstoneGarnetNetworkInfo,
+  // RedstoneGarnetNetworkInfo,
 ]

@@ -33,6 +33,7 @@ export enum SupportedNetwork {
   REDSTONE,
   REDSTONE_GARNET,
   INK,
+  ABSTRACT,
 }
 
 export type NetworkInfo = {
@@ -221,6 +222,17 @@ export const InkNetworkInfo: NetworkInfo = {
   imageURL: INK_LOGO_URL,
 }
 
+export const AbstractNetworkInfo: NetworkInfo = {
+  chainId: ChainId.ABSTRACT_MAINNET,
+  id: SupportedNetwork.ABSTRACT,
+  route: 'abstract',
+  name: 'Abstract',
+  bgColor: '#00DE73',
+  primaryColor: '#07C983',
+  secondaryColor: '#2172E5',
+  imageURL: ABSTRACT_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -238,4 +250,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   RedstoneNetworkInfo,
   // RedstoneGarnetNetworkInfo,
   InkNetworkInfo,
+  AbstractNetworkInfo,
 ]

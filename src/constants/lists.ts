@@ -7,6 +7,7 @@ export const SHAPE_LIST = relayTokenList(360)
 export const REDSTONE_LIST = relayTokenList(690)
 export const REDSTONE_GARNET_LIST = relayTokenList(17069, true)
 export const INK_LIST = relayTokenList(57073)
+export const ABSTRACT_LIST = relayTokenList(2741)
 
 // default lists to be 'active' aka searched across
 export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
@@ -18,6 +19,7 @@ export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
   REDSTONE_LIST,
   REDSTONE_GARNET_LIST,
   INK_LIST,
+  ABSTRACT_LIST,
 ]
 
 // lower index == higher priority for token import

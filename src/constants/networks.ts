@@ -226,7 +226,7 @@ export const AbstractNetworkInfo: NetworkInfo = {
   chainId: ChainId.ABSTRACT_MAINNET,
   id: SupportedNetwork.ABSTRACT,
   route: 'abstract',
-  name: 'abstract',
+  name: 'Abstract',
   bgColor: '#00DE73',
   primaryColor: '#07C983',
   secondaryColor: '#2172E5',

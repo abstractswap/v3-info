@@ -250,5 +250,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   RedstoneNetworkInfo,
   // RedstoneGarnetNetworkInfo,
   InkNetworkInfo,
-  AbstractNetworkInfo,
+  // AbstractNetworkInfo,
 ]

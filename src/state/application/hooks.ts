@@ -34,6 +34,8 @@ import {
   inkClient,
   abstractBlockClient,
   abstractClient,
+  animeTestnetClient,
+  animeTestnetBlockClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -186,6 +188,8 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
       return inkClient
     case SupportedNetwork.ABSTRACT:
       return abstractClient
+    case SupportedNetwork.ANIME_TESTNET:
+      return animeTestnetClient
     default:
       return client
   }
@@ -229,6 +233,8 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
       return inkBlockClient
     case SupportedNetwork.ABSTRACT:
       return abstractBlockClient
+    case SupportedNetwork.ANIME_TESTNET:
+      return animeTestnetBlockClient
     default:
       return blockClient
   }

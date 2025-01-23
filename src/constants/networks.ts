@@ -15,6 +15,7 @@ import SHAPE_LOGO_URL from '../assets/images/shape-logo.png'
 import REDSTONE_LOGO_URL from '../assets/images/redstone-logo.svg'
 import REDSTONE_GARNET_LOGO_URL from '../assets/images/redstone-garnet-logo.png'
 import INK_LOGO_URL from '../assets/images/ink-logo.png'
+import ANIME_TESTNET_LOGO_URL from '../assets/images/anime-logo.png'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -34,6 +35,7 @@ export enum SupportedNetwork {
   REDSTONE_GARNET,
   INK,
   ABSTRACT,
+  ANIME_TESTNET,
 }
 
 export type NetworkInfo = {
@@ -233,6 +235,17 @@ export const AbstractNetworkInfo: NetworkInfo = {
   imageURL: ABSTRACT_LOGO_URL,
 }
 
+export const AnimeTestnetNetworkInfo: NetworkInfo = {
+  chainId: ChainId.ANIME_TESTNET,
+  id: SupportedNetwork.ANIME_TESTNET,
+  route: 'anime-testnet',
+  name: 'Anime Testnet',
+  bgColor: '#0052ff',
+  primaryColor: '#0052ff',
+  secondaryColor: '#0052ff',
+  imageURL: ANIME_TESTNET_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -251,4 +264,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   RedstoneGarnetNetworkInfo,
   InkNetworkInfo,
   AbstractNetworkInfo,
+  AnimeTestnetNetworkInfo,
 ]

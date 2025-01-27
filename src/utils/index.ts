@@ -32,6 +32,7 @@ const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [ChainId.BNB]: 'https://bscscan.com',
   [ChainId.AVALANCHE]: 'https://snowtrace.io',
   [ChainId.BASE]: 'https://basescan.org',
+  [ChainId.ABSTRACT_MAINNET]: 'https://explorer.mainnet.abs.xyz',
   [ChainId.ABSTRACT_TESTNET]: 'https://explorer.testnet.abs.xyz',
   [ChainId.ZERO]: 'https://explorer.zero.network',
   [ChainId.BOB]: 'https://explorer.gobob.xyz',

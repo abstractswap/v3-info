@@ -95,6 +95,9 @@ export const initialState: PoolsState = {
     [SupportedNetwork.SHAPE]: {},
     [SupportedNetwork.REDSTONE]: {},
     [SupportedNetwork.REDSTONE_GARNET]: {},
+    [SupportedNetwork.INK]: {},
+    [SupportedNetwork.ABSTRACT]: {},
+    [SupportedNetwork.ANIME_TESTNET]: {},
   },
 }
 

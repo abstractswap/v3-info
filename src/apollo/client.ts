@@ -565,14 +565,27 @@ export const shapeBlockClient = new ApolloClient({
 
 export const redstoneClient = new ApolloClient({
   uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone/v3-subgraph',
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
   queryDeduplication: true,
   defaultOptions: {
     watchQuery: {
-      fetchPolicy: 'cache-first',
+      fetchPolicy: 'no-cache',
     },
     query: {
-      fetchPolicy: 'cache-first',
+      fetchPolicy: 'no-cache',
       errorPolicy: 'all',
     },
   },
@@ -595,6 +608,34 @@ export const redstoneBlockClient = new ApolloClient({
 
 export const redstoneGarnetClient = new ApolloClient({
   uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone-garnet/v3-subgraph',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const redstoneGarnetBlockClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone-garnet/blocks-subgraph',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -608,8 +649,122 @@ export const redstoneGarnetClient = new ApolloClient({
   },
 })
 
-export const redstoneGarnetBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone-garnet/blocks-subgraph',
+export const inkClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/ink/v3-subgraph',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const inkBlockClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/ink/blocks-subgraph',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const abstractClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/abstract/v3-subgraph',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const abstractBlockClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/abstract/blocks-subgraph',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const animeTestnetClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/anime-testnet/v3-subgraph',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const animeTestnetBlockClient = new ApolloClient({
+  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/anime-testnet/blocks-subgraph',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {

@@ -14,6 +14,8 @@ import CYBER_LOGO_URL from '../assets/images/cyber-logo.png'
 import SHAPE_LOGO_URL from '../assets/images/shape-logo.png'
 import REDSTONE_LOGO_URL from '../assets/images/redstone-logo.svg'
 import REDSTONE_GARNET_LOGO_URL from '../assets/images/redstone-garnet-logo.png'
+import INK_LOGO_URL from '../assets/images/ink-logo.png'
+import ANIME_TESTNET_LOGO_URL from '../assets/images/anime-logo.png'
 
 export enum SupportedNetwork {
   ETHEREUM,
@@ -31,6 +33,9 @@ export enum SupportedNetwork {
   SHAPE,
   REDSTONE,
   REDSTONE_GARNET,
+  INK,
+  ABSTRACT,
+  ANIME_TESTNET,
 }
 
 export type NetworkInfo = {
@@ -208,6 +213,39 @@ export const RedstoneGarnetNetworkInfo: NetworkInfo = {
   imageURL: REDSTONE_GARNET_LOGO_URL,
 }
 
+export const InkNetworkInfo: NetworkInfo = {
+  chainId: ChainId.INK,
+  id: SupportedNetwork.INK,
+  route: 'ink',
+  name: 'ink',
+  bgColor: '#0052ff',
+  primaryColor: '#0052ff',
+  secondaryColor: '#0052ff',
+  imageURL: INK_LOGO_URL,
+}
+
+export const AbstractNetworkInfo: NetworkInfo = {
+  chainId: ChainId.ABSTRACT_MAINNET,
+  id: SupportedNetwork.ABSTRACT,
+  route: 'abstract',
+  name: 'Abstract',
+  bgColor: '#00DE73',
+  primaryColor: '#07C983',
+  secondaryColor: '#2172E5',
+  imageURL: ABSTRACT_LOGO_URL,
+}
+
+export const AnimeTestnetNetworkInfo: NetworkInfo = {
+  chainId: ChainId.ANIME_TESTNET,
+  id: SupportedNetwork.ANIME_TESTNET,
+  route: 'anime-testnet',
+  name: 'Anime Testnet',
+  bgColor: '#0052ff',
+  primaryColor: '#0052ff',
+  secondaryColor: '#0052ff',
+  imageURL: ANIME_TESTNET_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -224,4 +262,7 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // RedstoneNetworkInfo,
   AbstractTestnetNetworkInfo,
   RedstoneGarnetNetworkInfo,
+  InkNetworkInfo,
+  AbstractNetworkInfo,
+  AnimeTestnetNetworkInfo,
 ]

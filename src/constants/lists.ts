@@ -1,11 +1,14 @@
 export const UNSUPPORTED_LIST_URLS: string[] = []
-export const ABSTRACT_TESTNET_LIST = relayTokenList(11124, true)
-export const ZERO_LIST = relayTokenList(11124)
-export const BOB_LIST = relayTokenList(60808)
-export const CYBER_LIST = relayTokenList(7560)
-export const SHAPE_LIST = relayTokenList(360)
-export const REDSTONE_LIST = relayTokenList(690)
-export const REDSTONE_GARNET_LIST = relayTokenList(17069, true)
+export const ABSTRACT_TESTNET_LIST = getTokenListApiURL('abstract-testnet')
+export const ZERO_LIST = getTokenListApiURL('zero')
+export const BOB_LIST = getLegacyTokenListApiURL('60808') // legacy URL
+export const CYBER_LIST = getTokenListApiURL('cyber')
+export const SHAPE_LIST = getTokenListApiURL('shape')
+export const REDSTONE_LIST = getTokenListApiURL('redstone')
+export const REDSTONE_GARNET_LIST = getTokenListApiURL('garnet')
+export const INK_LIST = getTokenListApiURL('ink')
+export const ABSTRACT_LIST = getTokenListApiURL('abstract')
+export const ANIME_TESTNET_LIST = getTokenListApiURL('anime-testnet')
 
 // default lists to be 'active' aka searched across
 export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
@@ -16,6 +19,9 @@ export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
   SHAPE_LIST,
   REDSTONE_LIST,
   REDSTONE_GARNET_LIST,
+  INK_LIST,
+  ABSTRACT_LIST,
+  ANIME_TESTNET_LIST,
 ]
 
 // lower index == higher priority for token import
@@ -24,6 +30,10 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   ...UNSUPPORTED_LIST_URLS, // need to load unsupported tokens as well
 ]
 
-function relayTokenList(chainId: string | number, testnets = false) {
-  return `https://api${testnets ? '.testnets.' : '.'}relay.link/tokenlist?chainId=${chainId}`
+function getTokenListApiURL(slug: string) {
+  return `https://api-${slug}.reservoir.tools/tokenlist/v1`
+}
+
+function getLegacyTokenListApiURL(chainId: string) {
+  return `https://api.relay.link/tokenlist?chainId=${chainId}`
 }

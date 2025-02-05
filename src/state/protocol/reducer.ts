@@ -59,6 +59,7 @@ export const initialState: ProtocolState = {
   [SupportedNetwork.INK]: DEFAULT_INITIAL_STATE,
   [SupportedNetwork.ABSTRACT]: DEFAULT_INITIAL_STATE,
   [SupportedNetwork.ANIME_TESTNET]: DEFAULT_INITIAL_STATE,
+  [SupportedNetwork.MODE]: DEFAULT_INITIAL_STATE,
 }
 
 export default createReducer(initialState, (builder) =>

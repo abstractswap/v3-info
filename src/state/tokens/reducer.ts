@@ -84,6 +84,7 @@ export const initialState: TokensState = {
     [SupportedNetwork.INK]: {},
     [SupportedNetwork.ABSTRACT]: {},
     [SupportedNetwork.ANIME_TESTNET]: {},
+    [SupportedNetwork.MODE]: {},
   },
 }
 

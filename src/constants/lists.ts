@@ -9,6 +9,7 @@ export const REDSTONE_GARNET_LIST = getTokenListApiURL('garnet')
 export const INK_LIST = getTokenListApiURL('ink')
 export const ABSTRACT_LIST = getTokenListApiURL('abstract')
 export const ANIME_TESTNET_LIST = getTokenListApiURL('anime-testnet')
+export const MODE_LIST = getTokenListApiURL('mode')
 
 // default lists to be 'active' aka searched across
 export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
@@ -22,6 +23,7 @@ export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
   INK_LIST,
   ABSTRACT_LIST,
   ANIME_TESTNET_LIST,
+  MODE_LIST
 ]
 
 // lower index == higher priority for token import

@@ -23,7 +23,7 @@ export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
   INK_LIST,
   ABSTRACT_LIST,
   ANIME_TESTNET_LIST,
-  MODE_LIST
+  MODE_LIST,
 ]
 
 // lower index == higher priority for token import

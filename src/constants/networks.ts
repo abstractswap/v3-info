@@ -187,8 +187,8 @@ export const ShapeNetworkNetworkInfo: NetworkInfo = {
   id: SupportedNetwork.SHAPE,
   route: 'shape',
   name: 'Shape',
-  bgColor: '#222',
-  primaryColor: '#222',
+  bgColor: '#828282',
+  primaryColor: '#828282',
   secondaryColor: '#fff',
   imageURL: SHAPE_LOGO_URL,
 }
